@@ -54,6 +54,7 @@ router.post('/', (req, res) => {
     res.status(201).json(scheme);
   })
   .catch (err => {
+    console.log(err.message)
     res.status(500).json({ message: 'Failed to create new scheme' });
   });
 });
@@ -74,6 +75,7 @@ router.post('/:id/steps', (req, res) => {
     }
   })
   .catch (err => {
+    console.log(err.message)
     res.status(500).json({ message: 'Failed to create new step' });
   });
 });
